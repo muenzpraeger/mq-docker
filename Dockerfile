@@ -18,13 +18,13 @@ LABEL maintainer "Arthur Barr <arthur.barr@uk.ibm.com>, Rob Parker <PARROBE@uk.i
 
 LABEL "ProductID"="98102d16795c4263ad9ca075190a2d4d" \
       "ProductName"="IBM MQ Advanced for Developers" \
-      "ProductVersion"="9.0.3"
+      "ProductVersion"="9.0.4"
 
 # The URL to download the MQ installer from in tar.gz format
-ARG MQ_URL=https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/messaging/mqadv/mqadv_dev903_ubuntu_x86-64.tar.gz
+ARG MQ_URL=https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/messaging/mqadv/mqadv_dev904_ubuntu_x86-64.tar.gz
 
 # The MQ packages to install
-ARG MQ_PACKAGES="ibmmq-server ibmmq-java ibmmq-jre ibmmq-gskit ibmmq-web ibmmq-msg-.*"
+ARG MQ_PACKAGES="ibmmq-server ibmmq-java ibmmq-jre ibmmq-gskit ibmmq-web ibmmq-msg-.* ibmmq-sfbridge ibmmq-samples ibmmq-amqp"
 
 RUN export DEBIAN_FRONTEND=noninteractive \
   # Install additional packages required by MQ, this install process and the runtime scripts
